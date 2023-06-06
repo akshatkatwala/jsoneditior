@@ -1,6 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/navbar';
+import Form from './components/Form';
+
 
 function App() {
   return (
@@ -9,6 +11,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Welcome to React</p>
+        <Form></Form>
       </header>
     </div>
   );
