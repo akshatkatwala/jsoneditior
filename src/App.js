@@ -1,7 +1,8 @@
 import logo from './logo.svg';
 import './App.css';
 import Navbar from './components/navbar';
-import Form from './components/Form';
+import JsonButton from './components/jsonbutton';
+import CreateFileButton from './components/createfile';
 
 
 function App() {
@@ -11,7 +12,8 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>Welcome to React</p>
-        <Form></Form>
+        <JsonButton></JsonButton>
+        <CreateFileButton></CreateFileButton>
       </header>
     </div>
   );
