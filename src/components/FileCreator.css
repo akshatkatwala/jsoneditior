@@ -1,0 +1,53 @@
+.file-creator {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f0f0f0;
+}
+
+.form-field {
+  margin-bottom: 10px;
+}
+
+label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+input[type='text'] {
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.add-button,
+.create-button {
+  padding: 8px 16px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+}
+
+.add-button {
+  margin-right: 10px;
+}
+
+.create-button {
+  margin-top: 10px;
+}
+
+.file-content {
+  margin-top: 20px;
+}
+
+.property-name {
+  font-weight: bold;
+}
+
+.property-value {
+  margin-left: 5px;
+}

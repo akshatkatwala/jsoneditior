@@ -1,20 +1,7 @@
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
+import React from "react";
 
-function ColorSchemesExample() {
-  return (
-    <>
-      <Navbar bg="dark" variant="dark">
-        <Container>
-          <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-          <Nav className="me-auto">
-            <Nav.Link href="../jsonscreen.html">Home</Nav.Link>
-          </Nav>
-        </Container>
-      </Navbar>
-    </>
-  );
-}
+const Navbar = () => {
+  return <nav>Navigation Bar</nav>;
+};
 
-export default ColorSchemesExample;
+export default Navbar;
