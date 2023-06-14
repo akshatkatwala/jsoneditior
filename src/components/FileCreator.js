@@ -7,7 +7,22 @@ class FileCreator extends React.Component {
     propertyName: "",
     propertyValue: "",
     jsonContent: [],
+    websocket: null,
   };
+
+  componentDidMount() {
+    const websocket = new WebSocket('ws://localhost:8080'); 
+
+    websocket.onopen = () => {
+      console.log("WebSocket connection established");
+    };
+
+    websocket.onclose = () => {
+      console.log("WebSocket connection closed");
+    };
+
+    this.setState({ websocket });
+  }
 
   handleFileNameChange = (event) => {
     this.setState({ fileName: event.target.value });
@@ -30,6 +45,16 @@ class FileCreator extends React.Component {
         propertyName: "",
         propertyValue: "",
       }));
+
+      this.sendDataToServer(newEntry);
+    }
+  };
+
+  sendDataToServer = (data) => {
+    const { websocket } = this.state;
+    if (websocket && websocket.readyState === WebSocket.OPEN) {
+      const json = JSON.stringify(data);
+      websocket.send(json);
     }
   };
 
